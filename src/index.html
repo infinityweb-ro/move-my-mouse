@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tiny Mouse Jiggler</title>
+    <style>
+      :root {
+        --bg: #0b0d12;
+        --card: #141823;
+        --text: #e6e9ef;
+        --muted: #9aa4b2;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica,
+          Arial, sans-serif;
+        background: linear-gradient(180deg, #0b0d12, #0e1322);
+        color: var(--text);
+      }
+      .wrap {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+      .hero {
+        display: grid;
+        gap: 14px;
+        padding: 28px;
+        background: var(--card);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+      .h1 {
+        font-size: 40px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .btns {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+      .btn {
+        padding: 12px 16px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #0b0d12;
+        background: #93c5fd;
+        font-weight: 600;
+      }
+      .btn.alt {
+        background: #a7f3d0;
+      }
+      .card {
+        margin-top: 24px;
+        padding: 20px;
+        background: #111726;
+        border-radius: 14px;
+      }
+      code,
+      pre {
+        background: #0b1020;
+        color: #e6e9ef;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+      pre {
+        overflow: auto;
+        padding: 14px;
+      }
+      footer {
+        margin: 40px 0 10px;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <div class="h1">Tiny Mouse Jiggler</div>
+        <p class="muted">
+          A tiny, safe Windows utility that keeps your PC awake by doing
+          micro-jiggles with zero visual drift and auto-pause when you’re
+          active.
+        </p>
+        <div class="btns">
+          <a class="btn" href="../dist/TinyMouseJiggler.exe">Download .exe</a>
+          <a class="btn alt" href="https://github.com/USERNAME/mouse-jiggler"
+            >View on GitHub</a
+          >
+        </div>
+      </section>
+
+      <div class="card">
+        <h3>Why this one?</h3>
+        <ul>
+          <li>✨ No install, single portable <code>.exe</code></li>
+          <li>🛡️ Open source, no network calls</li>
+          <li>🎯 Micro-jiggle &amp; return – no cursor drift</li>
+          <li>🤫 Pauses when you move the mouse</li>
+          <li>⚙️ Headless mode for power users</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Headless usage</h3>
+        <pre><code>TinyMouseJiggler.exe --headless --interval 45 --jitter 10 --pixels 2 --idle-grace 2.0</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Build it yourself</h3>
+        <pre><code>pip install pyinstaller
+pyinstaller --onefile --noconsole --name TinyMouseJiggler src/main.py</code></pre>
+      </div>
+
+      <footer>
+        © YOUR NAME • MIT License • No telemetry, no updates, nothing shady.
+      </footer>
+    </div>
+  </body>
+</html>
